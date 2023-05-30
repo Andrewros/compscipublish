@@ -1,0 +1,25 @@
+{% extends "layout.html" %} {% block title %}Image Classifier{% endblock %} {%
+block main %}
+<div id="loading"></div>
+<div id="content">
+	<form action="/train" method="post" enctype="multipart/form-data">
+		Name of thing in image:
+		<input type="text" name="class" placeholder="Name" /><br />
+		Folder(Must be exactly 12 images):
+		<input type="file" name="images" multiple directory="" webkitdirectory="" />
+		<button class="btn btn-primary" type="submit">Train</button>
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	</form>
+</div>
+<h5>This may take a long time</h5>
+<script type="text/javascript">
+	function postloader() {
+		document.getElementById("loading").style.display = "block";
+		document.getElementById("loading").style.backgroundSize = "contain";
+		document.getElementById("content").style.display = "none";
+	} //preloader
+
+	const form = document.querySelector("form");
+	form.addEventListener("submit", postloader);
+</script>
+{% endblock %}

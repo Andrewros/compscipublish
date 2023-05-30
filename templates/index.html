@@ -1,0 +1,12 @@
+{% extends "layout.html" %} {% block title %}Image Classifier{% endblock %} {%
+block main %}
+<form action="/" method="post" enctype="multipart/form-data">
+	<input type="file" name="image" />
+	<button class="btn btn-primary" type="submit">Classify</button>
+</form>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<p>
+	Until you train the ai the only images it will detect are Andrew, Matthew and
+	Brad
+</p>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "layout.html" %} {% block title %}Image Classifier{% endblock %} {%
+block main %}
+<form action="/" method="get">
+	<h1>I believe that is a picture of {{name}}</h1>
+	<button class="btn btn-primary" type="submit">Try Again</button>
+</form>
+{% endblock %}
